@@ -6,11 +6,15 @@
     <title>Portfolio</title>
     <link rel="shortcut icon" href="img/f logo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/materialize.css">
+    <link rel="stylesheet" href="css/pre-loader.css">
 <!--     <link rel="stylesheet" href="fontawesome-free-5.15.2-web/css/all.css"> -->
 	<script src="https://kit.fontawesome.com/e504e3c873.js" crossorigin="anonymous"></script>
 	
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
     <style>
+        .hoverable:hover{
+            box-shadow: 2px 10px 40px #00A859;
+        }
         .animate__animated.animate__pulse {
         --animate-duration: 2s;
         }
@@ -35,10 +39,11 @@
         }
         
         .two{
-            border-radius: 150px;
+            /* border-radius: 150px; */
              background-color:  #00A859;
-             margin-left: 80px;
              color:white;
+             /* border-top-left-radius: 10px; 
+             border-bottom-right-radius: 10px; */
         }
         .two:hover{
             background-color:white;
@@ -48,7 +53,7 @@
         .three{
             border-radius: 150px; 
             background-color:  white;
-            margin-left: 80px;
+            margin-left: 40px;
             color:#00A859;
         }
         .three:hover{
@@ -80,11 +85,34 @@
         .pp{
             background-image: url(../portfolio/img/intro-bg.jpg);
         }
-     
+     /* any-image-u-want-to-be-full{
+        background-position: center;background-size: cover;
+     } */
+     /* transparency{
+        opacity:0.4;
+     } */
     </style>
 </head>
 <body style="background-color: black; color: white;">
-    <nav class="nav-wrapper black animate__animated animate__backInLeft" style="z-index: 999;">
+    <div  id="pre" style="text-align: center;width: 100%;height: 100%;background: url('img/intro-bg.jpg');z-index:999;position: fixed;">
+        <div style="width:5%;margin-left:45%;height:20%;margin-top: 25%;">
+        <div class="loader-3">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        </div>
+    </div>
+    <script>
+      var preloader =document.getElementById('pre');
+      function hide(){
+        preloader.style.display = 'none';
+      } 
+      setTimeout(hide,1000)
+    </script>
+    <nav class="nav-wrapper black animate__animated animate__backInLeft" style="z-index: 9;">
         <a href="" class="brand-logo hide-on-large-only center"><img src="img/f logo.png" width="18%"  alt=""></a>
     <div class="hide-on-med-and-down">
             <a href="" class="brand-logo"><img src="img/f logo.png"  class="logo" alt=""></a>
@@ -109,13 +137,15 @@
     <li><a href="#case" class="white-text"><i class="fas fa-book white-text"></i>Case Studies</a></li>
 </ul>
     <br><br><br<br>
-    <div class="row container four"><br><br>
-        <div class="col l6 animate__animated animate__lightSpeedInRight">
-            <div class="section1">
-                <h5 style="font-size: small;" class="white-text">HI THERE👋👋.....MY NAMES ARE</h5>
-                <h2 class="white-text">OCHI <br> <span> FRANKLIN CHIKWADO</span></h2>
-                <h5 style="font-size:20px; color: #00A859;" >I am a Front-end and also a Back-end developer 👨‍💻👩‍💻 with self-determined goals in bringing accuracy and commitment in all i do</h5><br>
-                <a href="#" style="color: #00A859;"><i class="fas fa-phone white-text" style="transform: rotate(100deg);"></i>+2347011394565</a><br><br>
+    <div class="row  four"><br><br>
+        <div class="col l6 animate__animated animate__lightSpeedInRight ">
+            <div class="section1 container">
+                <br><br><br><br><br><br><br><br>
+                <h5 class="white-text">HI There👋👋.....My Names Are</h5>
+                <h2 class="white-text">OCHI FRANKLIN </h2>
+                <h5 style="font-size:20px; color: #00A859;" >
+                    I am a Full-stack developer 👨‍💻👩‍💻 with self-determined goals in bringing accuracy and commitment in all i do.</h5><br>
+                <!-- <a href="#" style="color: #00A859;"><i class="fas fa-phone white-text" style="transform: rotate(0deg);"></i>+2347011394565</a><br><br> -->
                 <a href=""class="two btn-large">My Works</a>
                 <a href="" class="three btn-large">About Me</a>
             </div>
@@ -256,6 +286,7 @@
         <a href=""><i style="color:  #00A859; padding: 10px;" class="fab fa-instagram fa-3x"></i></a>
         <a href=""><i style="color:  #00A859; padding: 10px;" class="fab fa-twitter fa-3x"></i></a>
         <a href=""><i style="color:  #00A859; padding: 10px;    " class="fab fa-github fa-3x"></i></a>
+        <a href="https://api.whatsapp.com/send?phone=2347011394565" target="_blank"><i style="color:  #00A859; padding: 10px;    " class="fab fa-whatsapp fa-3x"></i></a>
     </div>
     <div class="footer2 white-text center" style="background-color: #00A859; padding: 10px;">
         © Copyright Franklin Ochi. All rights reserved  
